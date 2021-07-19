@@ -295,6 +295,8 @@ local set_groups = function()
         TelescopePromptBorder = {fg = c.blue},
         TelescopeResultsBorder = {fg = c.gray_alt},
         TelescopePreviewBorder = {fg = c.gray},
+        TelescopeMatching = {fg = c.light_blue},
+        TelescopePromptPrefix = {fg = c.light_blue},
         -- Nerdtree
         NERDTreeDir = {fg = c.pink},
         NERDTreeDirSlash = {fg = c.blue},
