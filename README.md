@@ -2,6 +2,10 @@
 
 A cold, dark color scheme for Neovim written in Lua ported from [vim-substrata](https://github.com/arzg/vim-substrata) theme.
 
+## Screenshot
+
+<img width="1612" alt="Screenshot 2021-07-19 at 10 29 33 PM" src="https://user-images.githubusercontent.com/1040966/126198536-db58e689-f7cb-4cc7-a331-04b29c080c46.png">
+
 ## ✨ Features
 
 - Supports the latest Neovim 0.5 features like TreeSitter and LSP
