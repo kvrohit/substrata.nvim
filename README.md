@@ -1,6 +1,6 @@
 # 🏔  Substrata
 
-A cold, dark color scheme for Neovim theme written in Lua ported from [vim-substrata](https://github.com/arzg/vim-substrata) theme.
+A cold, dark color scheme for Neovim written in Lua ported from [vim-substrata](https://github.com/arzg/vim-substrata) theme.
 
 ## ✨ Features
 
@@ -22,7 +22,6 @@ A cold, dark color scheme for Neovim theme written in Lua ported from [vim-subst
 - [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
 - [Neogit](https://github.com/TimUntersberger/neogit)
 - [vim-sneak](https://github.com/justinmk/vim-sneak)
-- [Fern](https://github.com/lambdalisue/fern.vim)
 
 ## ⚡️ Requirements
 
@@ -60,4 +59,5 @@ vim.cmd [[colorscheme substrata]]
 
 ## 👍 Credits
 
-The original authors of the excellent [vim-substrata](https://github.com/arzg/vim-substrata) theme.
+- The original authors of the excellent [vim-substrata](https://github.com/arzg/vim-substrata) theme.
+- Lua plugin derived from [neon](https://github.com/rafamadriz/neon) and influenced by [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
