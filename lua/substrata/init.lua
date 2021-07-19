@@ -7,7 +7,7 @@ local set_terminal_colors = function()
     vim.g.terminal_color_1 = c.cyan
     vim.g.terminal_color_2 = c.green
     vim.g.terminal_color_3 = c.blue
-    vim.g.terminal_color_4 = c.yellow
+    vim.g.terminal_color_4 = c.blue
     vim.g.terminal_color_5 = c.pink
     vim.g.terminal_color_6 = c.blue
     vim.g.terminal_color_7 = c.blue
@@ -47,7 +47,7 @@ local set_groups = function()
         IncSearch = {style = "reverse"},
         LineNr = {fg = c.disabled},
         CursorLineNr = {fg = c.gray_alt},
-        MatchParen = {fg = c.light_pink, style = "underline,bold"},
+        MatchParen = {fg = c.fg1, style = "bold"},
         ModeMsg = {fg = c.cyan, style = "bold"},
         MoreMsg = {fg = c.cyan, style = "bold"},
         NonText = {fg = c.bg3},
@@ -72,8 +72,8 @@ local set_groups = function()
         TablineSel = {fg = c.bg0, bg = c.blue},
         Tabline = {fg = c.gray},
         Title = {fg = c.cyan, bg = c.none, style = "bold"},
-        Visual = {fg = c.none, style = "reverse"},
-        VisualNOS = {fg = c.none, style = "reverse"},
+        Visual = {fg = c.none, bg = c.bg3},
+        VisualNOS = {fg = c.none, bg = c.bg3},
         WarningMsg = {fg = c.red, style = "bold"},
         WildMenu = {fg = c.bg0, bg = c.blue, style = "bold"},
         CursorColumn = {fg = c.none, bg = c.fg},
@@ -82,7 +82,6 @@ local set_groups = function()
         ToolbarButton = {fg = c.fg, bg = c.none, style = "bold"},
         NormalMode = {fg = c.cyan, bg = c.none, style = "reverse"},
         InsertMode = {fg = c.green, bg = c.none, style = "reverse"},
-        ReplacelMode = {fg = c.red, bg = c.none, style = "reverse"},
         VisualMode = {fg = c.cyan, bg = c.none, style = "reverse"},
         VertSplit = {fg = c.gray_alt},
         CommandMode = {fg = c.gray, bg = c.none, style = "reverse"},
