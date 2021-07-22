@@ -74,7 +74,7 @@ local set_groups = function()
         Title = {fg = c.cyan, bg = c.none, style = "bold"},
         Visual = {fg = c.none, bg = c.bg3},
         VisualNOS = {fg = c.none, bg = c.bg3},
-        WarningMsg = {fg = c.red, style = "bold"},
+        WarningMsg = {fg = c.yellow, style = "bold"},
         WildMenu = {fg = c.bg0, bg = c.blue, style = "bold"},
         CursorColumn = {fg = c.none, bg = c.fg},
         CursorLine = {fg = c.none, bg = c.bg1},
@@ -85,10 +85,10 @@ local set_groups = function()
         VisualMode = {fg = c.cyan, bg = c.none, style = "reverse"},
         VertSplit = {fg = c.gray_alt},
         CommandMode = {fg = c.gray, bg = c.none, style = "reverse"},
-        Warnings = {fg = c.red},
+        Warnings = {fg = c.yellow},
         healthError = {fg = c.red},
         healthSuccess = {fg = c.green},
-        healthWarning = {fg = c.red},
+        healthWarning = {fg = c.yellow},
         --common
         Type = {fg = c.cyan}, -- int, long, char, etc.
         StorageClass = {fg = c.cyan}, -- static, register, volatile, etc.
@@ -97,8 +97,8 @@ local set_groups = function()
         Comment = {fg = c.gray, bg = c.none, style = "italic"},
         Conditional = {fg = c.blue, bg = c.none, style = "italic"}, -- italic if, then, else, endif, switch, etc.
         Keyword = {fg = c.blue, bg = c.none, style = "italic"}, -- italic for, do, while, etc.
-        Repeat = {fg = c.red, bg = c.none, style = "italic"}, -- italic any other keyword
-        Boolean = {fg = c.blue, bg = c.none, style = "italic"}, -- true , false
+        Repeat = {fg = c.blue, bg = c.none, style = "italic"}, -- italic any other keyword
+        Boolean = {fg = c.pink, bg = c.none, style = "italic"}, -- true , false
         Function = {fg = c.blue, bg = c.none},
         Identifier = {fg = c.blue, bg = c.none}, -- any variable name
         String = {fg = c.cyan, bg = c.none}, -- Any string
@@ -179,7 +179,7 @@ local set_groups = function()
         TSComment = {fg = c.gray, bg = c.none, style = "italic"}, -- For comment blocks.
         TSConditional = {fg = c.pink}, -- For keywords related to conditionnals.
         TSConstant = {fg = c.fg}, -- For constants
-        TSConstBuiltin = {fg = c.light_pink, style = "italic"}, -- For constants that are built in the language: `nil` in Lua.
+        TSConstBuiltin = {fg = c.pink, style = "italic"}, -- For constants that are built in the language: `nil` in Lua.
         TSConstMacro = {fg = c.cyan}, -- For constants that are defined by macros: `NULL` in C.
         TSConstructor = {fg = red}, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         TSError = {fg = c.red}, -- For syntax/parser errors.
@@ -187,7 +187,7 @@ local set_groups = function()
         TSField = {fg = c.blue}, -- For fields.
         TSFloat = {fg = c.pink}, -- For floats.
         TSFunction = {fg = c.light_blue, style = "italic"}, -- For fuction (calls and definitions).
-        TSFuncBuiltin = {fg = c.red, style = "italic"}, -- For builtin functions: `table.insert` in Lua.
+        TSFuncBuiltin = {fg = c.light_blue, style = "italic"}, -- For builtin functions: `table.insert` in Lua.
         TSFuncMacro = {fg = c.blue}, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         TSInclude = {fg = c.blue, style = "italic"}, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
         TSKeyword = {fg = c.blue}, -- For keywords that don't fall in previous categories.
@@ -202,7 +202,7 @@ local set_groups = function()
         TSOperator = {fg = c.gray_alt}, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter = {fg = c.fg}, -- For parameters of a function.
         TSParameterReference = {fg = c.fg}, -- For references to parameters of a function.
-        TSProperty = {fg = c.light_blue}, -- Same as `TSField`.
+        TSProperty = {fg = c.blue}, -- Same as `TSField`.
         TSPunctDelimiter = {fg = c.gray_alt}, -- For delimiters ie: `.`
         TSPunctBracket = {fg = c.gray_alt}, -- For brackets and parens.
         TSPunctSpecial = {fg = c.pink}, -- For special punctutation that does not fall in the catagories before.
@@ -233,7 +233,7 @@ local set_groups = function()
         TSType = {fg = c.pink}, -- For types.
         TSTypeBuiltin = {fg = c.cyan}, -- For builtin types.
         TSVariable = {fg = c.fg}, -- Any variable name that does not have another highlight.
-        TSVariableBuiltin = {fg = c.cyan, style = "italic"}, -- Variable names that are defined by the languages, like `this` or `self`.
+        TSVariableBuiltin = {fg = c.pink, style = "italic"}, -- Variable names that are defined by the languages, like `this` or `self`.
         -- Lsp highlight groups
         LspDiagnosticsDefaultError = {fg = c.light_red}, -- used for "Error" diagnostic virtual text
         LspDiagnosticsSignError = {fg = c.light_red}, -- used for "Error" diagnostic signs in sign column
@@ -326,19 +326,24 @@ local set_groups = function()
         -- NvimTree
         NvimTreeRootFolder = {fg = c.cyan, style = "italic"},
         NvimTreeNormal = {fg = c.fg, bg = c.bg0},
-        NvimTreeGitDirty = {fg = c.light_yellow},
-        NvimTreeGitNew = {fg = c.green},
         NvimTreeImageFile = {fg = c.pink},
         NvimTreeExecFile = {fg = c.green},
-        NvimTreeSpecialFile = {fg = c.yellow, style = "underline"},
+        NvimTreeSpecialFile = {fg = c.pink},
         NvimTreeFolderName = {fg = c.blue},
+        NvimTreeOpenedFolderName = {fg = c.light_blue},
+        NvimTreeOpenedFile = {fg = c.light_blue},
         NvimTreeEmptyFolderName = {fg = c.gray},
-        NvimTreeFolderIcon = {fg = c.gray},
+        NvimTreeFolderIcon = {fg = c.gray_alt},
         NvimTreeIndentMarker = {fg = c.disabled},
-        LspDiagnosticsError = {fg = c.red},
-        LspDiagnosticsWarning = {fg = c.red},
-        LspDiagnosticsInformation = {fg = c.gray_alt},
-        LspDiagnosticsHint = {fg = c.blue},
+        NvimTreeGitDirty = {fg = c.gray_alt},
+        NvimTreeGitStaged = {fg = c.cyan},
+        NvimTreeGitRenamed = {fg = c.yellow},
+        NvimTreeGitNew = {fg = c.green},
+        NvimTreeGitDeleted = {fg = c.red},
+        LspDiagnosticsError = {fg = c.light_red},
+        LspDiagnosticsWarning = {fg = c.light_yellow},
+        LspDiagnosticsInformation = {fg = c.light_blue},
+        LspDiagnosticsHint = {fg = c.light_cyan},
         -- Ale-vim
         ALEError = {fg = c.red},
         ALEWarning = {fg = c.red},
