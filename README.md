@@ -8,7 +8,7 @@ A cold, dark color scheme for Neovim written in Lua ported from [vim-substrata](
 
 ## ✨ Features
 
-- Supports the latest Neovim 0.5 features like TreeSitter and LSP
+- Supports the latest Neovim `0.5` features like TreeSitter and LSP
 - Terminal colors inside Neovim
 
 ### Plugin Support
@@ -18,13 +18,12 @@ A cold, dark color scheme for Neovim written in Lua ported from [vim-substrata](
 - [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
 - [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
 - [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
-- [Git Gutter](https://github.com/airblade/vim-gitgutter)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [WhichKey](https://github.com/liuchengxu/vim-which-key)
 - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
-- [Neogit](https://github.com/TimUntersberger/neogit)
+- [ALE](https://github.com/dense-analysis/ale)
 - [vim-sneak](https://github.com/justinmk/vim-sneak)
 
 ## ⚡️ Requirements

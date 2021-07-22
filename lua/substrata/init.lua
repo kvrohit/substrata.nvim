@@ -154,12 +154,12 @@ local set_groups = function()
         markdownId = {fg = c.cyan},
         markdownIdDeclaration = {fg = c.blue},
         markdownIdDelimiter = {fg = c.cyan},
-        markdownLinkDelimiter = {fg = c.cyan},
-        markdownLinkText = {fg = c.light_blue},
-        markdownListMarker = {fg = c.yellow},
-        markdownOrderedListMarker = {fg = c.yellow},
+        markdownLinkDelimiter = {fg = c.gray},
+        markdownLinkText = {fg = c.blue, style = "italic"},
+        markdownListMarker = {fg = c.gray_alt},
+        markdownOrderedListMarker = {fg = c.gray_alt},
         markdownRule = {fg = c.gray},
-        markdownUrl = {fg = c.cyan, bg = c.none, style = "underline"},
+        markdownUrl = {fg = c.gray_alt, bg = c.none, style = "underline"},
         markdownBlockquote = {fg = c.gray_alt},
         markdownBold = {fg = c.red, bg = c.none, style = "bold"},
         markdownItalic = {fg = c.red, bg = c.none, style = "italic"},
@@ -235,26 +235,26 @@ local set_groups = function()
         TSVariable = {fg = c.fg}, -- Any variable name that does not have another highlight.
         TSVariableBuiltin = {fg = c.pink, style = "italic"}, -- Variable names that are defined by the languages, like `this` or `self`.
         -- Lsp highlight groups
-        LspDiagnosticsDefaultError = {fg = c.light_red}, -- used for "Error" diagnostic virtual text
-        LspDiagnosticsSignError = {fg = c.light_red}, -- used for "Error" diagnostic signs in sign column
-        LspDiagnosticsFloatingError = {fg = c.light_red, style = "bold"}, -- used for "Error" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextError = {fg = c.light_red, style = "bold"}, -- Virtual text "Error"
-        LspDiagnosticsUnderlineError = {fg = c.light_red, style = "undercurl", sp = c.red}, -- used to underline "Error" diagnostics.
-        LspDiagnosticsDefaultWarning = {fg = c.light_yellow}, -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsSignWarning = {fg = c.light_yellow}, -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsFloatingWarning = {fg = c.light_yellow, style = "bold"}, -- used for "Warning" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextWarning = {fg = c.light_yellow, style = "bold"}, -- Virtual text "Warning"
-        LspDiagnosticsUnderlineWarning = {fg = c.light_yellow, style = "undercurl", sp = c.yellow}, -- used to underline "Warning" diagnostics.
-        LspDiagnosticsDefaultInformation = {fg = c.light_blue}, -- used for "Information" diagnostic virtual text
-        LspDiagnosticsSignInformation = {fg = c.light_blue}, -- used for "Information" diagnostic signs in sign column
-        LspDiagnosticsFloatingInformation = {fg = c.light_blue, style = "bold"}, -- used for "Information" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextInformation = {fg = c.light_blue, style = "bold"}, -- Virtual text "Information"
-        LspDiagnosticsUnderlineInformation = {fg = c.light_blue, style = "undercurl", sp = c.blue}, -- used to underline "Information" diagnostics.
-        LspDiagnosticsDefaultHint = {fg = c.light_cyan}, -- used for "Hint" diagnostic virtual text
-        LspDiagnosticsSignHint = {fg = c.light_cyan}, -- used for "Hint" diagnostic signs in sign column
-        LspDiagnosticsFloatingHint = {fg = c.light_cyan, style = "bold"}, -- used for "Hint" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextHint = {fg = c.light_cyan, style = "bold"}, -- Virtual text "Hint"
-        LspDiagnosticsUnderlineHint = {fg = c.light_cyan, style = "undercurl", sp = c.cyan}, -- used to underline "Hint" diagnostics.
+        LspDiagnosticsDefaultError = {fg = c.red}, -- used for "Error" diagnostic virtual text
+        LspDiagnosticsSignError = {fg = c.red}, -- used for "Error" diagnostic signs in sign column
+        LspDiagnosticsFloatingError = {fg = c.red, style = "bold"}, -- used for "Error" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextError = {fg = c.red, style = "bold"}, -- Virtual text "Error"
+        LspDiagnosticsUnderlineError = {fg = c.red, style = "undercurl", sp = c.red}, -- used to underline "Error" diagnostics.
+        LspDiagnosticsDefaultWarning = {fg = c.yellow}, -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsSignWarning = {fg = c.yellow}, -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsFloatingWarning = {fg = c.yellow, style = "bold"}, -- used for "Warning" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextWarning = {fg = c.yellow, style = "bold"}, -- Virtual text "Warning"
+        LspDiagnosticsUnderlineWarning = {fg = c.yellow, style = "undercurl", sp = c.yellow}, -- used to underline "Warning" diagnostics.
+        LspDiagnosticsDefaultInformation = {fg = c.blue}, -- used for "Information" diagnostic virtual text
+        LspDiagnosticsSignInformation = {fg = c.blue}, -- used for "Information" diagnostic signs in sign column
+        LspDiagnosticsFloatingInformation = {fg = c.blue, style = "bold"}, -- used for "Information" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextInformation = {fg = c.blue, style = "bold"}, -- Virtual text "Information"
+        LspDiagnosticsUnderlineInformation = {fg = c.blue, style = "undercurl", sp = c.blue}, -- used to underline "Information" diagnostics.
+        LspDiagnosticsDefaultHint = {fg = c.cyan}, -- used for "Hint" diagnostic virtual text
+        LspDiagnosticsSignHint = {fg = c.cyan}, -- used for "Hint" diagnostic signs in sign column
+        LspDiagnosticsFloatingHint = {fg = c.cyan, style = "bold"}, -- used for "Hint" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextHint = {fg = c.cyan, style = "bold"}, -- Virtual text "Hint"
+        LspDiagnosticsUnderlineHint = {fg = c.cyan, style = "undercurl", sp = c.cyan}, -- used to underline "Hint" diagnostics.
         LspReferenceText = {fg = c.fg, bg = c.pink}, -- used for highlighting "text" references
         LspReferenceRead = {fg = c.fg, bg = c.pink}, -- used for highlighting "read" references
         LspReferenceWrite = {fg = c.fg, bg = c.pink}, -- used for highlighting "write" references
@@ -272,18 +272,6 @@ local set_groups = function()
         diffFile = {fg = c.gray},
         diffLine = {fg = c.cyan},
         diffIndexLine = {fg = c.pink},
-        -- Neogit
-        NeogitBranch = {fg = c.gray_alt},
-        NeogitRemote = {fg = c.pink},
-        NeogitHunkHeader = {fg = c.fg, bg = c.cyan},
-        NeogitHunkHeaderHighlight = {fg = c.blue},
-        NeogitDiffContextHighlight = {fg = c.fg},
-        NeogitDiffDeleteHighlight = {fg = c.red},
-        NeogitDiffAddHighlight = {fg = c.green},
-        -- GitGutter
-        GitGutterAdd = {fg = c.light_green}, -- diff mode: Added line |diff.txt|
-        GitGutterChange = {fg = c.light_blue}, -- diff mode: Changed line |diff.txt|
-        GitGutterDelete = {fg = c.light_red}, -- diff mode: Deleted line |diff.txt|
         -- GitSigns
         GitSignsAdd = {fg = c.light_green}, -- diff mode: Added line |diff.txt|
         GitSignsAddNr = {fg = c.light_green}, -- diff mode: Added line |diff.txt|
@@ -294,35 +282,14 @@ local set_groups = function()
         GitSignsDelete = {fg = c.light_red}, -- diff mode: Deleted line |diff.txt|
         GitSignsDeleteNr = {fg = c.light_red}, -- diff mode: Deleted line |diff.txt|
         GitSignsDeleteLn = {fg = c.light_red}, -- diff mode: Deleted line |diff.txt|
-        -- vim-signify
-        SignifySignAdd = {fg = c.light_green},
-        SignifySignChange = {fg = c.light_yellow},
-        SignifySignDelete = {fg = c.light_red},
-        -- Syntastic
-        SyntasticError = {fg = c.red},
-        SyntasticWarning = {fg = c.yellow},
-        SyntasticErrorSign = {fg = c.red},
-        SyntasticWarningSign = {fg = c.yellow},
         -- Telescope
         TelescopeSelectionCaret = {fg = c.light_blue, bg = c.bg3},
         TelescopeBorder = {fg = c.gray},
         TelescopePromptBorder = {fg = c.blue},
         TelescopeResultsBorder = {fg = c.gray_alt},
         TelescopePreviewBorder = {fg = c.gray},
-        TelescopeMatching = {fg = c.light_pink},
+        TelescopeMatching = {fg = c.red},
         TelescopePromptPrefix = {fg = c.light_blue},
-        -- Nerdtree
-        NERDTreeDir = {fg = c.pink},
-        NERDTreeDirSlash = {fg = c.blue},
-        NERDTreeOpenable = {fg = c.red},
-        NERDTreeClosable = {fg = c.red},
-        NERDTreeFile = {fg = c.blue},
-        NERDTreeExecFile = {fg = c.green},
-        NERDTreeUp = {fg = c.gray},
-        NERDTreeCWD = {fg = c.green},
-        NERDTreeHelp = {fg = c.gray_alt},
-        NERDTreeToggleOn = {fg = c.green},
-        NERDTreeToggleOff = {fg = c.red},
         -- NvimTree
         NvimTreeRootFolder = {fg = c.cyan, style = "italic"},
         NvimTreeNormal = {fg = c.fg, bg = c.bg0},
@@ -407,26 +374,7 @@ local set_groups = function()
         SneakScope = {bg = c.bg4},
         -- Indent Blankline
         IndentBlanklineChar = {fg = c.disabled},
-        IndentBlanklineContextChar = {fg = c.cyan},
-        -- Nvim dap
-        DapBreakpoint = {fg = c.red},
-        DapStopped = {fg = c.green},
-        -- Startify
-        StartifyNumber = {fg = c.pink},
-        StartifySelect = {fg = c.green},
-        StartifyBracket = {fg = c.gray},
-        StartifySpecial = {fg = c.cyan},
-        StartifyVar = {fg = c.blue},
-        StartifyPath = {fg = c.blue},
-        StartifyFile = {fg = c.green},
-        StartifySlash = {fg = c.pink},
-        StartifyHeader = {fg = c.pink},
-        StartifySection = {fg = c.red},
-        StartifyFooter = {fg = c.green},
-        -- EasyMotion
-        EasyMotionTarget = {fg = c.red, bg = c.none, style = "bold"},
-        EasyMotionTarget2First = {fg = c.red, bg = c.none, style = "bold"},
-        EasyMotionTarget2Second = {fg = c.red, bg = c.none, style = "bold"},
+        IndentBlanklineContextChar = {fg = c.gray},
     }
 
     for group, parameters in pairs(groups) do
