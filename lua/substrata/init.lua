@@ -47,7 +47,7 @@ local set_groups = function()
         IncSearch = {style = "reverse"},
         LineNr = {fg = c.disabled},
         CursorLineNr = {fg = c.gray_alt},
-        MatchParen = {fg = c.fg1, style = "bold"},
+        MatchParen = {fg = c.light_cyan, style = "bold"},
         ModeMsg = {fg = c.cyan, style = "bold"},
         MoreMsg = {fg = c.cyan, style = "bold"},
         NonText = {fg = c.bg3},
@@ -118,7 +118,7 @@ local set_groups = function()
         Special = {fg = c.blue, bg = c.none, "italic"}, -- any special symbol
         SpecialChar = {fg = c.red}, -- special character in a constant
         Tag = {fg = c.red}, -- you can use CTRL-] on this
-        Delimiter = {fg = c.yellow}, -- character that needs attention like , or .
+        Delimiter = {fg = c.gray_alt}, -- character that needs attention like , or .
         SpecialComment = {fg = c.blue}, -- special things inside a comment
         Debug = {fg = c.red}, -- debugging statements
         Underlined = {fg = c.cyan, bg = c.none, style = "underline"}, -- text that stands out, HTML links
@@ -172,31 +172,32 @@ local set_groups = function()
         DashboardCenter = {fg = c.blue},
         DashboardFooter = {fg = c.green, style = "italic"},
         -- TreeSitter highlight groups
+        TSAnnotation = {fg = red}, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+        TSAttribute = {fg = c.pink}, -- (unstable) TODO: docs
+        TSBoolean = {fg = c.pink, bg = c.none, style = "italic"}, -- true or false
+        TSCharacter = {fg = red}, -- For characters.
         TSComment = {fg = c.gray, bg = c.none, style = "italic"}, -- For comment blocks.
         TSConditional = {fg = c.pink}, -- For keywords related to conditionnals.
-        TSKeyword = {fg = c.blue}, -- For keywords that don't fall in previous categories.
-        TSAnnotation = {fg = red}, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-        TSRepeat = {fg = c.blue, style = "italic"}, -- For keywords related to loops.
-        TSAttribute = {fg = c.pink}, -- (unstable) TODO: docs
-        TSKeywordFunction = {fg = c.blue}, -- For keywords used to define a fuction.
-        TSCharacter = {fg = red}, -- For characters.
-        TSBoolean = {fg = c.pink, bg = c.none, style = "italic"}, -- true or false
-        TSFunction = {fg = c.light_blue, style = "italic"}, -- For fuction (calls and definitions).
-        TSMethod = {fg = c.light_blue, style = "italic"}, -- For method calls and definitions.
-        TSConstructor = {fg = red}, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-        TSFuncBuiltin = {fg = c.red, style = "italic"}, -- For builtin functions: `table.insert` in Lua.
         TSConstant = {fg = c.fg}, -- For constants
-        TSVariable = {fg = c.fg}, -- Any variable name that does not have another highlight.
-        TSVariableBuiltin = {fg = c.cyan, style = "italic"}, -- Variable names that are defined by the languages, like `this` or `self`.        TSConstBuiltin = {fg = red}, -- For constant that are built in the language: `nil` in Lua.
+        TSConstBuiltin = {fg = c.light_pink, style = "italic"}, -- For constants that are built in the language: `nil` in Lua.
         TSConstMacro = {fg = c.cyan}, -- For constants that are defined by macros: `NULL` in C.
+        TSConstructor = {fg = red}, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         TSError = {fg = c.red}, -- For syntax/parser errors.
         TSException = {fg = c.blue}, -- For exception related keywords.
         TSField = {fg = c.blue}, -- For fields.
         TSFloat = {fg = c.pink}, -- For floats.
+        TSFunction = {fg = c.light_blue, style = "italic"}, -- For fuction (calls and definitions).
+        TSFuncBuiltin = {fg = c.red, style = "italic"}, -- For builtin functions: `table.insert` in Lua.
         TSFuncMacro = {fg = c.blue}, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         TSInclude = {fg = c.blue, style = "italic"}, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+        TSKeyword = {fg = c.blue}, -- For keywords that don't fall in previous categories.
+        TSKeywordFunction = {fg = c.blue}, -- For keywords used to define a fuction.
+        TSKeywordOperator = {fg = c.gray_alt}, -- For operators that are English words, e.g. `and`, `as`, `or`.
+        TSKeywordReturn = {fg = c.blue, style = "italic"}, -- For the `return` and `yield` keywords.
         TSLabel = {fg = c.cyan}, -- For labels: `label:` in C and `:label:` in Lua.
+        TSMethod = {fg = c.light_blue, style = "italic"}, -- For method calls and definitions.
         TSNamespace = {fg = c.blue}, -- For identifiers referring to modules and namespaces.
+        TSNone = {}, -- For no highlighting.
         TSNumber = {fg = c.pink}, -- For all numbers
         TSOperator = {fg = c.gray_alt}, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter = {fg = c.fg}, -- For parameters of a function.
@@ -205,44 +206,55 @@ local set_groups = function()
         TSPunctDelimiter = {fg = c.gray_alt}, -- For delimiters ie: `.`
         TSPunctBracket = {fg = c.gray_alt}, -- For brackets and parens.
         TSPunctSpecial = {fg = c.pink}, -- For special punctutation that does not fall in the catagories before.
+        TSRepeat = {fg = c.blue, style = "italic"}, -- For keywords related to loops.
         TSString = {fg = c.cyan}, -- For strings.
         TSStringRegex = {fg = c.blue}, -- For regexes.
         TSStringEscape = {fg = c.red}, -- For escape characters within a string.
+        TSStringSpecial = {fg = c.pink}, -- For strings with special meaning that don't fit into the above categories.
         TSSymbol = {fg = c.red}, -- For identifiers referring to symbols or atoms.
-        TSType = {fg = c.pink}, -- For types.
-        TSTypeBuiltin = {fg = c.cyan}, -- For builtin types.
         TSTag = {fg = c.blue}, -- Tags like html tag names.
-        TSTagDelimiter = {fg = c.blue}, -- Tag delimiter like `<` `>` `/`
+        TSTagAttribute = {fg = c.light_blue, style = "italic"}, -- For html tag attributes.
+        TSTagDelimiter = {fg = c.gray_alt}, -- Tag delimiter like `<` `>` `/`
         TSText = {fg = c.pink}, -- For strings considered text in a markup language.
-        TSTextReference = {fg = c.red}, -- FIXME
-        TSEmphasis = {fg = c.pink}, -- For text to be represented with emphasis.
+        TSStrong = {fg = c.pink, style = "bold"}, -- For text to be represented in bold.
+        TSEmphasis = {fg = c.pink, style = "bold,italic"}, -- For text to be represented with emphasis.
         TSUnderline = {fg = c.fg, bg = c.none, style = "underline"}, -- For text to be represented with an underline.
         TSStrike = {}, -- For strikethrough text.
         TSTitle = {fg = c.fg, bg = c.none, style = "bold"}, -- Text that is part of a title.
         TSLiteral = {fg = c.fg}, -- Literal text.
         TSURI = {fg = c.pink}, -- Any URL like a link or email.
-        --TSNone =                    { },    -- TODO: docs
+        TSMath = {fg = c.blue}, -- For LaTeX-like math environments.
+        TSTextReference = {fg = c.red}, -- For footnotes, text references, citations.
+        TSEnvironment = {fg = c.blue}, -- For text environments of markup languages.
+        TSEnvironmentName = {fg = c.light_blue}, -- For the name/the string indicating the type of text environment.
+        TSNote = {fg = c.blue, style = "italic"}, -- Text representation of an informational note.
+        TSWarning = {fg = c.yellow, style = "italic"}, -- Text representation of a warning note.
+        TSDanger = {fg = c.red, style = "italic"}, -- Text representation of a danger note.
+        TSType = {fg = c.pink}, -- For types.
+        TSTypeBuiltin = {fg = c.cyan}, -- For builtin types.
+        TSVariable = {fg = c.fg}, -- Any variable name that does not have another highlight.
+        TSVariableBuiltin = {fg = c.cyan, style = "italic"}, -- Variable names that are defined by the languages, like `this` or `self`.
         -- Lsp highlight groups
-        LspDiagnosticsDefaultError = {fg = c.red}, -- used for "Error" diagnostic virtual text
-        LspDiagnosticsSignError = {fg = c.red}, -- used for "Error" diagnostic signs in sign column
-        LspDiagnosticsFloatingError = {fg = c.red, style = "bold"}, -- used for "Error" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextError = {fg = c.red, style = "bold"}, -- Virtual text "Error"
-        LspDiagnosticsUnderlineError = {fg = c.red, style = "undercurl", sp = c.red}, -- used to underline "Error" diagnostics.
-        LspDiagnosticsDefaultWarning = {fg = c.red}, -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsSignWarning = {fg = c.red}, -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsFloatingWarning = {fg = c.red, style = "bold"}, -- used for "Warning" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextWarning = {fg = c.red, style = "bold"}, -- Virtual text "Warning"
-        LspDiagnosticsUnderlineWarning = {fg = c.red, style = "undercurl", sp = c.red}, -- used to underline "Warning" diagnostics.
-        LspDiagnosticsDefaultInformation = {fg = c.blue}, -- used for "Information" diagnostic virtual text
-        LspDiagnosticsSignInformation = {fg = c.blue}, -- used for "Information" diagnostic signs in sign column
-        LspDiagnosticsFloatingInformation = {fg = c.blue, style = "bold"}, -- used for "Information" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextInformation = {fg = c.blue, style = "bold"}, -- Virtual text "Information"
-        LspDiagnosticsUnderlineInformation = {fg = c.blue, style = "undercurl", sp = c.blue}, -- used to underline "Information" diagnostics.
-        LspDiagnosticsDefaultHint = {fg = c.cyan}, -- used for "Hint" diagnostic virtual text
-        LspDiagnosticsSignHint = {fg = c.cyan}, -- used for "Hint" diagnostic signs in sign column
-        LspDiagnosticsFloatingHint = {fg = c.cyan, style = "bold"}, -- used for "Hint" diagnostic messages in the diagnostics float
-        LspDiagnosticsVirtualTextHint = {fg = c.cyan, style = "bold"}, -- Virtual text "Hint"
-        LspDiagnosticsUnderlineHint = {fg = c.cyan, style = "undercurl", sp = c.blue}, -- used to underline "Hint" diagnostics.
+        LspDiagnosticsDefaultError = {fg = c.light_red}, -- used for "Error" diagnostic virtual text
+        LspDiagnosticsSignError = {fg = c.light_red}, -- used for "Error" diagnostic signs in sign column
+        LspDiagnosticsFloatingError = {fg = c.light_red, style = "bold"}, -- used for "Error" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextError = {fg = c.light_red, style = "bold"}, -- Virtual text "Error"
+        LspDiagnosticsUnderlineError = {fg = c.light_red, style = "undercurl", sp = c.red}, -- used to underline "Error" diagnostics.
+        LspDiagnosticsDefaultWarning = {fg = c.light_yellow}, -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsSignWarning = {fg = c.light_yellow}, -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsFloatingWarning = {fg = c.light_yellow, style = "bold"}, -- used for "Warning" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextWarning = {fg = c.light_yellow, style = "bold"}, -- Virtual text "Warning"
+        LspDiagnosticsUnderlineWarning = {fg = c.light_yellow, style = "undercurl", sp = c.yellow}, -- used to underline "Warning" diagnostics.
+        LspDiagnosticsDefaultInformation = {fg = c.light_blue}, -- used for "Information" diagnostic virtual text
+        LspDiagnosticsSignInformation = {fg = c.light_blue}, -- used for "Information" diagnostic signs in sign column
+        LspDiagnosticsFloatingInformation = {fg = c.light_blue, style = "bold"}, -- used for "Information" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextInformation = {fg = c.light_blue, style = "bold"}, -- Virtual text "Information"
+        LspDiagnosticsUnderlineInformation = {fg = c.light_blue, style = "undercurl", sp = c.blue}, -- used to underline "Information" diagnostics.
+        LspDiagnosticsDefaultHint = {fg = c.light_cyan}, -- used for "Hint" diagnostic virtual text
+        LspDiagnosticsSignHint = {fg = c.light_cyan}, -- used for "Hint" diagnostic signs in sign column
+        LspDiagnosticsFloatingHint = {fg = c.light_cyan, style = "bold"}, -- used for "Hint" diagnostic messages in the diagnostics float
+        LspDiagnosticsVirtualTextHint = {fg = c.light_cyan, style = "bold"}, -- Virtual text "Hint"
+        LspDiagnosticsUnderlineHint = {fg = c.light_cyan, style = "undercurl", sp = c.cyan}, -- used to underline "Hint" diagnostics.
         LspReferenceText = {fg = c.fg, bg = c.pink}, -- used for highlighting "text" references
         LspReferenceRead = {fg = c.fg, bg = c.pink}, -- used for highlighting "read" references
         LspReferenceWrite = {fg = c.fg, bg = c.pink}, -- used for highlighting "write" references
@@ -297,7 +309,7 @@ local set_groups = function()
         TelescopePromptBorder = {fg = c.blue},
         TelescopeResultsBorder = {fg = c.gray_alt},
         TelescopePreviewBorder = {fg = c.gray},
-        TelescopeMatching = {fg = c.fg1},
+        TelescopeMatching = {fg = c.light_pink},
         TelescopePromptPrefix = {fg = c.light_blue},
         -- Nerdtree
         NERDTreeDir = {fg = c.pink},
@@ -349,7 +361,7 @@ local set_groups = function()
         LspSagaLspFinderBorder = {fg = c.gray},
         LspFloatWinNormal = {bg = c.bg0},
         LspFloatWinBorder = {fg = c.gray},
-        LspSagaBorderTitle = {fg = c.cyan},
+        LspSagaBorderTitle = {fg = c.gray_alt},
         TargetWord = {fg = c.cyan},
         ReferencesCount = {fg = c.gray_alt},
         DefinitionCount = {fg = c.gray_alt},
@@ -363,10 +375,10 @@ local set_groups = function()
         DiagnosticWarning = {fg = c.yellow},
         DiagnosticInformation = {fg = c.blue},
         DiagnosticHint = {fg = c.cyan},
-        DefinitionPreviewTitle = {fg = c.cyan},
+        DefinitionPreviewTitle = {fg = c.gray_alt},
         LspSagaShTruncateLine = {fg = c.gray},
         LspSagaDocTruncateLine = {fg = c.gray},
-        LspSagaCodeActionTitle = {fg = c.cyan},
+        LspSagaCodeActionTitle = {fg = c.gray_alt},
         LspSagaCodeActionTruncateLine = {fg = c.gray},
         LspSagaCodeActionContent = {fg = c.pink},
         LspSagaRenamePromptPrefix = {fg = c.green},
@@ -374,13 +386,13 @@ local set_groups = function()
         LspSagaHoverBorder = {fg = c.gray},
         LspSagaSignatureHelpBorder = {fg = c.gray},
         LspSagaCodeActionBorder = {fg = c.gray},
-        LspSagaAutoPreview = {fg = c.gray},
+        LspSagaAutoPreview = {fg = c.gray_alt},
         LspSagaDefPreviewBorder = {fg = c.gray},
         LspLinesDiagBorder = {fg = c.gray},
         LspSagaLightBulb = {fg = c.gray_alt},
         LspSagaLightBulbSign = {fg = c.gray_alt},
         LspSagaDiagnosticBorder = {fg = c.gray},
-        LspSagaDiagnosticHeader = {fg = c.cyan},
+        LspSagaDiagnosticHeader = {fg = c.gray_alt},
         LspSagaDiagnosticTruncateLine = {fg = c.gray},
         -- BufferLine
         BufferLineIndicatorSelected = {fg = c.green},
