@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme id="696969" name="Substrata" modified="2021-06-07 17:43:00" author="Rohit K Viswanath" website="https://github.com/kvrohit">
+    <searchResultIndication color="#a0b9d8" />
+    <filteredSearchResultIndication color="#a0b9d8" />
+    <occurrenceIndication color="#a0b9d8" />
+    <writeOccurrenceIndication color="#a0b9d8" />
+    <findScope color="#a0b9d8" />
+    <deletionIndication color="#BF616A" />
+    <sourceHoverBackground color="#191C25" />
+    <singleLineComment color="#5B5F71" italic="true" />
+    <multiLineComment color="#5B5F71" italic="true" />
+    <commentTaskTag color="#a0b9d8" italic="false" />
+    <javadoc color="#5B5F71" italic="true" />
+    <javadocLink color="#a0b9d8" italic="false" />
+    <javadocTag color="#a0b9d8" italic="false" />
+    <javadocKeyword color="#a0b9d8" italic="false" />
+    <class color="#a0b9d8" bold="false" underline="false" strikethrough="false" />
+    <interface color="#a0b9d8" bold="true" />
+    <method color="#8296b0" />
+    <methodDeclaration color="#8296b0" />
+    <bracket color="#6C6F82" />
+    <number color="#a18daf" />
+    <string color="#659ea2" italic="true" />
+    <operator color="#6C6F82" />
+    <keyword color="#81A1C1" bold="false" />
+    <annotation color="#8296b0" italic="true" />
+    <staticMethod color="#8296b0" italic="true" />
+    <localVariable color="#B5B4C9" />
+    <localVariableDeclaration color="#B5B4C9" />
+    <field color="#B5B4C9" />
+    <staticField color="#B5B4C9" />
+    <staticFinalField color="#B5B4C9" />
+    <deprecatedMember color="#d2b45f" underline="false" strikethrough="true" />
+    <enum color="#a0b9d8" />
+    <inheritedMethod color="#8296b0" />
+    <abstractMethod color="#8296b0" />
+    <parameterVariable color="#B5B4C9" />
+    <typeArgument color="#a0b9d8" />
+    <typeParameter color="#a0b9d8" />
+    <constant color="#A18DAF" />
+    <background color="#191C25" />
+    <currentLine color="#2e313d" />
+    <foreground color="#B5B4C9" />
+    <lineNumber color="#2e313d" />
+    <selectionBackground color="#434C5E" />
+    <selectionForeground color="#B5B4C9" />
+</colorTheme>
