@@ -60,7 +60,14 @@ colorscheme substrata
 vim.cmd [[colorscheme substrata]]
 ```
 
+## ☑️  Extras
+
+- Eclipse color theme: `extras/eclipse/substrata.xml`
+- Gnome Terminal color theme: `extras/gnome-terminal/substrata.sh`
+- iTerm2 color theme: `extras/iterm2/substrata.itermcolors`
+
 ## 👍 Credits
 
 - The original authors of the excellent [vim-substrata](https://github.com/arzg/vim-substrata) theme.
-- Lua plugin derived from [neon](https://github.com/rafamadriz/neon) and influenced by [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+- Lua plugin derived from [neon](https://github.com/rafamadriz/neon) and influenced by [tokyonight.nvim](https://github.com/folke/tokyonight.nvim).
+- Gnome terminal and iTerm2 colors exported from [terminal.sexy](http://terminal.sexy).
