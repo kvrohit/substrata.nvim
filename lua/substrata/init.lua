@@ -64,7 +64,7 @@ local set_groups = function()
         SpellCap = {fg = c.blue, bg = c.none, style = "italic,undercurl"},
         SpellLocal = {fg = c.cyan, bg = c.none, style = "italic,undercurl"},
         SpellRare = {fg = c.cyan, bg = c.none, style = "italic,undercurl"},
-        StatusLine = {fg = c.blue, bg = c.bg0},
+        StatusLine = {fg = c.bg0, bg = c.gray_alt},
         StatusLineNC = {fg = c.gray},
         StatusLineTerm = {fg = c.fg, bg = c.bg3},
         StatusLineTermNC = {fg = c.fg, bg = c.bg3},
