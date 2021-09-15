@@ -46,14 +46,42 @@ use 'kvrohit/substrata.nvim'
 
 Enable the colorscheme:
 
+```lua
+-- Lua
+vim.cmd [[colorscheme substrata]]
+```
+
 ```vim
 " Vim Script
 colorscheme substrata
 ```
 
+## ⚙️  Configuration
+
+> Configuration needs to be set **BEFORE** loading the color scheme with `colorscheme substrata`
+
+| Option                      | Default    | Description                   |
+| --------------------------- | ---------- | ----------------------------- |
+| substrata_italic_comments   | `true`     | Make comments italic          |
+| substrata_italic_keywords   | `false`    | Make keywords italic          |
+| substrata_italic_booleans   | `false`    | Make booleans italic          |
+| substrata_italic_functions  | `false`    | Make functions italic         |
+| substrata_italic_variables  | `false`    | Make variables italic         |
+
 ```lua
--- Lua
+-- Example config in lua
+vim.g.substrata_italic_functions = true
+
+-- Load the colorscheme
 vim.cmd [[colorscheme substrata]]
+```
+
+```vim
+" Example config in Vim Script
+let g:substrata_italic_functions = 1
+
+" Load the colorscheme
+colorscheme substrata
 ```
 
 ## Preview
