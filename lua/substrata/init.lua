@@ -2,6 +2,37 @@ local c = require('substrata.colors')
 local utils = require('substrata.utils')
 local M = {}
 
+local cfg = {
+    italic_comments = {
+        enabled = true,
+        style = "italic",
+    },
+    italic_variables = {
+        enabled = false,
+        style = "italic",
+    },
+    italic_keywords = {
+        enabled = false,
+        style = "italic",
+    },
+    italic_booleans = {
+        enabled = false,
+        style = "italic",
+    },
+    italic_functions = {
+        enabled = false,
+        style = "italic",
+    },
+}
+
+local get_style = function(config)
+    if config.enabled then
+        return config.style
+    else
+        return "NONE"
+    end
+end
+
 local set_terminal_colors = function()
     vim.g.terminal_color_0 = c.bg3
     vim.g.terminal_color_1 = c.red
@@ -94,12 +125,12 @@ local set_groups = function()
         StorageClass = {fg = c.cyan}, -- static, register, volatile, etc.
         Structure = {fg = c.pink}, -- struct, union, enum, etc.
         Constant = {fg = c.pink}, -- any constant
-        Comment = {fg = c.gray, bg = c.none, style = "italic"},
-        Conditional = {fg = c.blue, bg = c.none, style = "italic"}, -- italic if, then, else, endif, switch, etc.
-        Keyword = {fg = c.blue, bg = c.none, style = "italic"}, -- italic for, do, while, etc.
-        Repeat = {fg = c.blue, bg = c.none, style = "italic"}, -- italic any other keyword
-        Boolean = {fg = c.pink, bg = c.none, style = "italic"}, -- true , false
-        Function = {fg = c.blue, bg = c.none},
+        Comment = {fg = c.gray, bg = c.none, style = get_style(cfg.italic_comments)}, -- italic comments
+        Conditional = {fg = c.blue, bg = c.none, style = get_style(cfg.italic_keywords)}, -- italic if, then, else, endif, switch, etc.
+        Keyword = {fg = c.blue, bg = c.none, style = get_style(cfg.italic_keywords)}, -- italic for, do, while, etc.
+        Repeat = {fg = c.blue, bg = c.none, style = get_style(cfg.italic_keywords)}, -- italic any other keyword
+        Boolean = {fg = c.pink, bg = c.none, style = get_style(cfg.italic_booleans)}, -- true , false
+        Function = {fg = c.blue, bg = c.none, style = get_style(cfg.italic_functions)},
         Identifier = {fg = c.blue, bg = c.none}, -- any variable name
         String = {fg = c.cyan, bg = c.none}, -- Any string
         Character = {fg = c.red}, -- any character constant: 'c', '\n'
@@ -174,10 +205,10 @@ local set_groups = function()
         -- TreeSitter highlight groups
         TSAnnotation = {fg = red}, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
         TSAttribute = {fg = c.pink}, -- (unstable) TODO: docs
-        TSBoolean = {fg = c.pink, bg = c.none, style = "italic"}, -- true or false
+        TSBoolean = {fg = c.pink, bg = c.none, style = get_style(cfg.italic_booleans)}, -- true or false
         TSCharacter = {fg = red}, -- For characters.
-        TSComment = {fg = c.gray, bg = c.none, style = "italic"}, -- For comment blocks.
-        TSConditional = {fg = c.pink}, -- For keywords related to conditionnals.
+        TSComment = {fg = c.gray, bg = c.none, style = get_style(cfg.italic_comments)}, -- For comment blocks.
+        TSConditional = {fg = c.pink, style = get_style(cfg.italic_keywords)}, -- For keywords related to conditionnals.
         TSConstant = {fg = c.fg}, -- For constants
         TSConstBuiltin = {fg = c.pink, style = "italic"}, -- For constants that are built in the language: `nil` in Lua.
         TSConstMacro = {fg = c.cyan}, -- For constants that are defined by macros: `NULL` in C.
@@ -186,16 +217,16 @@ local set_groups = function()
         TSException = {fg = c.blue}, -- For exception related keywords.
         TSField = {fg = c.blue}, -- For fields.
         TSFloat = {fg = c.pink}, -- For floats.
-        TSFunction = {fg = c.light_blue, style = "italic"}, -- For fuction (calls and definitions).
-        TSFuncBuiltin = {fg = c.light_blue, style = "italic"}, -- For builtin functions: `table.insert` in Lua.
+        TSFunction = {fg = c.light_blue, style = get_style(cfg.italic_functions)}, -- For fuction (calls and definitions).
+        TSFuncBuiltin = {fg = c.light_blue, style = get_style(cfg.italic_functions)}, -- For builtin functions: `table.insert` in Lua.
         TSFuncMacro = {fg = c.blue}, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         TSInclude = {fg = c.blue, style = "italic"}, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-        TSKeyword = {fg = c.blue}, -- For keywords that don't fall in previous categories.
-        TSKeywordFunction = {fg = c.blue}, -- For keywords used to define a fuction.
+        TSKeyword = {fg = c.blue, style = get_style(cfg.italic_keywords)}, -- For keywords that don't fall in previous categories.
+        TSKeywordFunction = {fg = c.blue, style = get_style(cfg.italic_functions)}, -- For keywords used to define a fuction.
         TSKeywordOperator = {fg = c.gray_alt}, -- For operators that are English words, e.g. `and`, `as`, `or`.
-        TSKeywordReturn = {fg = c.blue, style = "italic"}, -- For the `return` and `yield` keywords.
+        TSKeywordReturn = {fg = c.blue, style = get_style(cfg.italic_keywords)}, -- For the `return` and `yield` keywords.
         TSLabel = {fg = c.cyan}, -- For labels: `label:` in C and `:label:` in Lua.
-        TSMethod = {fg = c.light_blue, style = "italic"}, -- For method calls and definitions.
+        TSMethod = {fg = c.light_blue, style = get_style(cfg.italic_functions)}, -- For method calls and definitions.
         TSNamespace = {fg = c.blue}, -- For identifiers referring to modules and namespaces.
         TSNone = {}, -- For no highlighting.
         TSNumber = {fg = c.pink}, -- For all numbers
@@ -206,7 +237,7 @@ local set_groups = function()
         TSPunctDelimiter = {fg = c.gray_alt}, -- For delimiters ie: `.`
         TSPunctBracket = {fg = c.gray_alt}, -- For brackets and parens.
         TSPunctSpecial = {fg = c.pink}, -- For special punctutation that does not fall in the catagories before.
-        TSRepeat = {fg = c.blue, style = "italic"}, -- For keywords related to loops.
+        TSRepeat = {fg = c.blue, style = get_style(cfg.italic_keywords)}, -- For keywords related to loops.
         TSString = {fg = c.cyan}, -- For strings.
         TSStringRegex = {fg = c.blue}, -- For regexes.
         TSStringEscape = {fg = c.red}, -- For escape characters within a string.
@@ -232,8 +263,8 @@ local set_groups = function()
         TSDanger = {fg = c.red, style = "italic"}, -- Text representation of a danger note.
         TSType = {fg = c.pink}, -- For types.
         TSTypeBuiltin = {fg = c.cyan}, -- For builtin types.
-        TSVariable = {fg = c.fg}, -- Any variable name that does not have another highlight.
-        TSVariableBuiltin = {fg = c.pink, style = "italic"}, -- Variable names that are defined by the languages, like `this` or `self`.
+        TSVariable = {fg = c.fg, style = get_style(cfg.italic_variables)}, -- Any variable name that does not have another highlight.
+        TSVariableBuiltin = {fg = c.pink, style = get_style(cfg.italic_variables)}, -- Variable names that are defined by the languages, like `this` or `self`.
         -- Lsp highlight groups
         LspDiagnosticsDefaultError = {fg = c.red}, -- used for "Error" diagnostic virtual text
         LspDiagnosticsSignError = {fg = c.red}, -- used for "Error" diagnostic signs in sign column
