@@ -13,6 +13,7 @@ local function opt(key, default)
 end
 
 M.config = {
+    transparent = opt("transparent", false),
     comment_style = opt("italic_comments", true) and "italic" or "NONE",
     keyword_style = opt("italic_keywords", false) and "italic" or "NONE",
     boolean_style = opt("italic_booleans", false) and "italic" or "NONE",
