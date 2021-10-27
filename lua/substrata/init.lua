@@ -29,7 +29,6 @@ local set_groups = function()
         -- Base
         -- Editor highlight groups
         Normal = {fg = c.fg, bg = cfg.transparent and c.none or c.bg}, -- normal text and background color
-        NormalNC = {fg = c.fg, bg = cfg.transparent and c.none or c.bg}, -- normal text in non-current windows
         SignColumn = {fg = c.fg, bg = cfg.transparent and c.none or c.bg0},
         EndOfBuffer = {fg = c.disabled}, -- ~ lines at the end of a buffer
         NormalFloat = {fg = c.fg, bg = c.bg2}, -- normal text and background color for floating windows
