@@ -28,8 +28,9 @@ local set_groups = function()
     local groups = {
         -- Base
         -- Editor highlight groups
-        Normal = {fg = c.fg, bg = cfg.transparent and c.none or c.bg}, -- normal text and background color
-        SignColumn = {fg = c.fg, bg = cfg.transparent and c.none or c.bg0},
+        Normal = {fg = c.fg, bg = cfg.transparent and c.none or c.bg0}, -- normal text and background color
+        NormalNC = {fg = c.fg, bg = cfg.transparent and c.none or c.bg0}, -- normal text in non-current windows
+        SignColumn = {fg = c.fg, bg = cfg.transparent and c.none or c.bg0}, -- column where signs are displayed
         EndOfBuffer = {fg = c.disabled}, -- ~ lines at the end of a buffer
         NormalFloat = {fg = c.fg, bg = c.bg2}, -- normal text and background color for floating windows
         FloatBorder = {fg = c.blue, bg = c.bg2},
@@ -293,7 +294,7 @@ local set_groups = function()
         TelescopePromptPrefix = {fg = c.light_blue},
         -- NvimTree
         NvimTreeRootFolder = {fg = c.cyan, style = "italic"},
-        NvimTreeNormal = {fg = c.fg, bg = c.bg0},
+        NvimTreeNormal = {fg = c.fg, bg = cfg.transparent and c.none or c.bg0},
         NvimTreeImageFile = {fg = c.pink},
         NvimTreeExecFile = {fg = c.green},
         NvimTreeSpecialFile = {fg = c.pink},
