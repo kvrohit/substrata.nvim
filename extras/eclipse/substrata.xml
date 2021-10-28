@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<colorTheme id="696969" name="Substrata" modified="2021-06-07 17:43:00" author="Rohit K Viswanath" website="https://github.com/kvrohit">
-    <searchResultIndication color="#a0b9d8" />
-    <filteredSearchResultIndication color="#a0b9d8" />
-    <occurrenceIndication color="#a0b9d8" />
-    <writeOccurrenceIndication color="#a0b9d8" />
-    <findScope color="#a0b9d8" />
+<colorTheme id="696969" name="Substrata" modified="2021-10-28 19:35:00" author="Rohit K Viswanath" website="https://github.com/kvrohit">
+    <searchResultIndication color="#2e313d" />
+    <filteredSearchResultIndication color="#2e313d" />
+    <occurrenceIndication color="#2e313d" />
+    <writeOccurrenceIndication color="#2e313d" />
+    <findScope color="#2e313d" />
     <deletionIndication color="#BF616A" />
     <sourceHoverBackground color="#191C25" />
     <singleLineComment color="#5B5F71" italic="true" />
     <multiLineComment color="#5B5F71" italic="true" />
-    <commentTaskTag color="#a0b9d8" italic="false" />
+    <commentTaskTag color="#a0b9d8" italic="true" />
     <javadoc color="#5B5F71" italic="true" />
-    <javadocLink color="#a0b9d8" italic="false" />
-    <javadocTag color="#a0b9d8" italic="false" />
-    <javadocKeyword color="#a0b9d8" italic="false" />
+    <javadocLink color="#a0b9d8" italic="true" />
+    <javadocTag color="#a0b9d8" italic="true" />
+    <javadocKeyword color="#a0b9d8" italic="true" />
     <class color="#a0b9d8" bold="false" underline="false" strikethrough="false" />
     <interface color="#a0b9d8" bold="true" />
     <method color="#8296b0" />
@@ -41,7 +41,7 @@
     <background color="#191C25" />
     <currentLine color="#2e313d" />
     <foreground color="#B5B4C9" />
-    <lineNumber color="#2e313d" />
+    <lineNumber color="#3c3f4e" />
     <selectionBackground color="#434C5E" />
     <selectionForeground color="#B5B4C9" />
 </colorTheme>
