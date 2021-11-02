@@ -6,6 +6,7 @@ A cold, dark color scheme for Neovim written in Lua ported from [vim-substrata](
 
 - Supports the latest Neovim `0.5` features like TreeSitter and LSP
 - Terminal colors inside Neovim
+- Color themes for some of the popular terminals: `alacritty`, `gnome-terminal`, `iterm2`, `kitty`, `konsole`, `wezterm`
 
 ### Plugin Support
 
@@ -119,6 +120,7 @@ colorscheme substrata
 - Konsole color theme: `extras/konsole/substrata.colorscheme`
 - WezTerm color theme: `extras/wezterm/colors/Substrata.toml`
 - kitty color theme: `extras/kitty/substrata.conf`
+- Alacritty color theme: `extras/alacritty/substrata.yaml`
 
 ## 👍 Credits
 
