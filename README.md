@@ -117,6 +117,8 @@ colorscheme substrata
 - Gnome Terminal color theme: `extras/gnome-terminal/substrata.sh`
 - iTerm2 color theme: `extras/iterm2/substrata.itermcolors`
 - Konsole color theme: `extras/konsole/substrata.colorscheme`
+- WezTerm color theme: `extras/wezterm/colors/Substrata.toml`
+- kitty color theme: `extras/kitty/substrata.conf`
 
 ## 👍 Credits
 
