@@ -67,6 +67,7 @@ colorscheme substrata
 | substrata_italic_booleans   | `false`    | Make booleans italic          |
 | substrata_italic_functions  | `false`    | Make functions italic         |
 | substrata_italic_variables  | `false`    | Make variables italic         |
+| substrata_transparent       | `false`    | Disable background color      |
 
 ```lua
 -- Example config in lua
