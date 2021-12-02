@@ -377,6 +377,18 @@ local set_groups = function()
     -- Indent Blankline
     IndentBlanklineChar = { fg = c.disabled },
     IndentBlanklineContextChar = { fg = c.gray },
+    -- nvim-cmp
+    CmpItemAbbrDeprecated = { fg = c.gray, style = "strikethrough" },
+    CmpItemAbbrMatch = { fg = c.blue },
+    CmpItemAbbrMatchFuzzy = { fg = c.blue },
+    CmpItemKindVariable = { fg = c.light_blue },
+    CmpItemKindInterface = { fg = c.light_blue },
+    CmpItemKindText = { fg = c.light_blue },
+    CmpItemKindFunction = { fg = c.pink },
+    CmpItemKindMethod = { fg = c.pink },
+    CmpItemKindKeyword = { fg = c.fg },
+    CmpItemKindProperty = { fg = c.fg },
+    CmpItemKindUnit = { fg = c.fg },
   }
 
   for group, parameters in pairs(groups) do
