@@ -53,7 +53,7 @@ local set_groups = function()
     ModeMsg = { fg = c.cyan, style = "bold" },
     MoreMsg = { fg = c.cyan, style = "bold" },
     NonText = { fg = c.bg3 },
-    Pmenu = { fg = c.fg, bg = c.bg4 },
+    Pmenu = { fg = c.fg, bg = c.bg3 },
     PmenuSel = { fg = c.bg0, bg = c.blue, style = "bold" },
     PmenuSbar = { fg = c.fg, bg = c.bg2 },
     PmenuThumb = { fg = c.fg, bg = c.gray },
@@ -237,13 +237,13 @@ local set_groups = function()
     TSVariable = { fg = c.fg, style = cfg.variable_style }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.pink, style = cfg.variable_style }, -- Variable names that are defined by the languages, like `this` or `self`.
     -- highlight groups for the native LSP client
-    LspReferenceText = { fg = c.fg, bg = c.pink }, -- used for highlighting "text" references
-    LspReferenceRead = { fg = c.fg, bg = c.pink }, -- used for highlighting "read" references
-    LspReferenceWrite = { fg = c.fg, bg = c.pink }, -- used for highlighting "write" references
+    LspReferenceText = { fg = c.bg0, bg = c.pink }, -- used for highlighting "text" references
+    LspReferenceRead = { fg = c.bg0, bg = c.pink }, -- used for highlighting "read" references
+    LspReferenceWrite = { fg = c.bg0, bg = c.pink }, -- used for highlighting "write" references
     -- Diagnostics
     DiagnosticError = { fg = c.red }, -- base highlight group for "Error"
-    DiagnosticWarning = { fg = c.yellow }, -- base highlight group for "Warning"
-    DiagnosticInformation = { fg = c.blue }, -- base highlight group from "Information"
+    DiagnosticWarn = { fg = c.yellow }, -- base highlight group for "Warning"
+    DiagnosticInfo = { fg = c.blue }, -- base highlight group from "Information"
     DiagnosticHint = { fg = c.cyan }, -- base highlight group for "Hint"
     DiagnosticUnderlineError = { fg = c.red, style = "undercurl", sp = c.red }, -- used to underline "Error" diagnostics.
     DiagnosticUnderlineWarn = { fg = c.yellow, style = "undercurl", sp = c.yellow }, -- used to underline "Warning" diagnostics.
