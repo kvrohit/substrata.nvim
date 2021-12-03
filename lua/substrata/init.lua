@@ -237,21 +237,25 @@ local set_groups = function()
     TSVariable = { fg = c.fg, style = cfg.variable_style }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.pink, style = cfg.variable_style }, -- Variable names that are defined by the languages, like `this` or `self`.
     -- Lsp highlight groups
+    LspDiagnosticsError = { fg = c.light_red }, -- base highlight group for "Error"
     LspDiagnosticsDefaultError = { fg = c.red }, -- used for "Error" diagnostic virtual text
     LspDiagnosticsSignError = { fg = c.red }, -- used for "Error" diagnostic signs in sign column
     LspDiagnosticsFloatingError = { fg = c.red, style = "bold" }, -- used for "Error" diagnostic messages in the diagnostics float
     LspDiagnosticsVirtualTextError = { fg = c.red, style = "bold" }, -- Virtual text "Error"
     LspDiagnosticsUnderlineError = { fg = c.red, style = "undercurl", sp = c.red }, -- used to underline "Error" diagnostics.
+    LspDiagnosticsWarning = { fg = c.light_yellow }, -- base highlight group for "Warning"
     LspDiagnosticsDefaultWarning = { fg = c.yellow }, -- used for "Warning" diagnostic signs in sign column
     LspDiagnosticsSignWarning = { fg = c.yellow }, -- used for "Warning" diagnostic signs in sign column
     LspDiagnosticsFloatingWarning = { fg = c.yellow, style = "bold" }, -- used for "Warning" diagnostic messages in the diagnostics float
     LspDiagnosticsVirtualTextWarning = { fg = c.yellow, style = "bold" }, -- Virtual text "Warning"
     LspDiagnosticsUnderlineWarning = { fg = c.yellow, style = "undercurl", sp = c.yellow }, -- used to underline "Warning" diagnostics.
+    LspDiagnosticsInformation = { fg = c.light_blue }, -- base highlight group for "Information"
     LspDiagnosticsDefaultInformation = { fg = c.blue }, -- used for "Information" diagnostic virtual text
     LspDiagnosticsSignInformation = { fg = c.blue }, -- used for "Information" diagnostic signs in sign column
     LspDiagnosticsFloatingInformation = { fg = c.blue, style = "bold" }, -- used for "Information" diagnostic messages in the diagnostics float
     LspDiagnosticsVirtualTextInformation = { fg = c.blue, style = "bold" }, -- Virtual text "Information"
     LspDiagnosticsUnderlineInformation = { fg = c.blue, style = "undercurl", sp = c.blue }, -- used to underline "Information" diagnostics.
+    LspDiagnosticsHint = { fg = c.light_cyan }, -- base highlight group for "Hint"
     LspDiagnosticsDefaultHint = { fg = c.cyan }, -- used for "Hint" diagnostic virtual text
     LspDiagnosticsSignHint = { fg = c.cyan }, -- used for "Hint" diagnostic signs in sign column
     LspDiagnosticsFloatingHint = { fg = c.cyan, style = "bold" }, -- used for "Hint" diagnostic messages in the diagnostics float
@@ -260,6 +264,15 @@ local set_groups = function()
     LspReferenceText = { fg = c.fg, bg = c.pink }, -- used for highlighting "text" references
     LspReferenceRead = { fg = c.fg, bg = c.pink }, -- used for highlighting "read" references
     LspReferenceWrite = { fg = c.fg, bg = c.pink }, -- used for highlighting "write" references
+    -- Diagnostics
+    DiagnosticError = { fg = c.light_red }, -- base highlight group for "Error"
+    DiagnosticWarning = { fg = c.light_yellow }, -- base highlight group for "Warning"
+    DiagnosticInformation = { fg = c.light_blue }, -- base highlight group from "Information"
+    DiagnosticHint = { fg = c.light_cyan }, -- base highlight group for "Hint"
+    DiagnosticUnderlineError = { fg = c.red, style = "undercurl", sp = c.red }, -- used to underline "Error" diagnostics.
+    DiagnosticUnderlineWarn = { fg = c.yellow, style = "undercurl", sp = c.yellow }, -- used to underline "Warning" diagnostics.
+    DiagnosticUnderlineInfo = { fg = c.blue, style = "undercurl", sp = c.blue }, -- used to underline "Information" diagnostics.
+    DiagnosticUnderlineHint = { fg = c.cyan, style = "undercurl", sp = c.cyan }, -- used to underline "Hint" diagnostics.
     -- Plugins highlight groups
     -- LspTrouble
     LspTroubleText = { fg = c.bg4 },
@@ -309,10 +322,6 @@ local set_groups = function()
     NvimTreeGitRenamed = { fg = c.yellow },
     NvimTreeGitNew = { fg = c.green },
     NvimTreeGitDeleted = { fg = c.red },
-    LspDiagnosticsError = { fg = c.light_red },
-    LspDiagnosticsWarning = { fg = c.light_yellow },
-    LspDiagnosticsInformation = { fg = c.light_blue },
-    LspDiagnosticsHint = { fg = c.light_cyan },
     -- Ale-vim
     ALEError = { fg = c.red },
     ALEWarning = { fg = c.red },
