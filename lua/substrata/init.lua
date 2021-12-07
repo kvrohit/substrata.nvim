@@ -104,7 +104,7 @@ local set_groups = function()
     Function = { fg = c.blue, bg = c.none, style = cfg.function_style },
     Identifier = { fg = c.blue, bg = c.none }, -- any variable name
     String = { fg = c.cyan, bg = c.none }, -- Any string
-    Character = { fg = c.red }, -- any character constant: 'c', '\n'
+    Character = { fg = c.pink }, -- any character constant: 'c', '\n'
     Number = { fg = c.pink }, -- a number constant: 5
     Float = { fg = c.pink }, -- a floating point constant: 2.3e10
     Statement = { fg = c.blue }, -- any statement
@@ -118,7 +118,7 @@ local set_groups = function()
     Typedef = { fg = c.cyan }, -- A typedef
     PreCondit = { fg = c.cyan }, -- preprocessor #if, #else, #endif, etc.
     Special = { fg = c.blue, bg = c.none, "italic" }, -- any special symbol
-    SpecialChar = { fg = c.red }, -- special character in a constant
+    SpecialChar = { fg = c.pink }, -- special character in a constant
     Tag = { fg = c.red }, -- you can use CTRL-] on this
     Delimiter = { fg = c.gray_alt }, -- character that needs attention like , or .
     SpecialComment = { fg = c.blue }, -- special things inside a comment
@@ -129,7 +129,7 @@ local set_groups = function()
     Todo = { fg = c.cyan, bg = c.none, style = "bold,italic" }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     -- HTML
     htmlArg = { fg = c.light_blue, style = "italic" },
-    htmlBold = { fg = c.red, bg = c.none, style = "bold" },
+    htmlBold = { fg = c.pink, bg = c.none, style = "bold" },
     htmlEndTag = { fg = c.fg },
     htmlstyle = { fg = c.cyan, bg = c.none, style = "italic" },
     htmlLink = { fg = c.cyan, style = "underline" },
@@ -211,7 +211,7 @@ local set_groups = function()
     TSRepeat = { fg = c.blue, style = cfg.keyword_style }, -- For keywords related to loops.
     TSString = { fg = c.cyan }, -- For strings.
     TSStringRegex = { fg = c.blue }, -- For regexes.
-    TSStringEscape = { fg = c.red }, -- For escape characters within a string.
+    TSStringEscape = { fg = c.pink }, -- For escape characters within a string.
     TSStringSpecial = { fg = c.pink }, -- For strings with special meaning that don't fit into the above categories.
     TSSymbol = { fg = c.red }, -- For identifiers referring to symbols or atoms.
     TSTag = { fg = c.blue }, -- Tags like html tag names.
@@ -321,10 +321,10 @@ local set_groups = function()
     NvimTreeGitDeleted = { fg = c.red },
     -- Ale-vim
     ALEError = { fg = c.red },
-    ALEWarning = { fg = c.red },
+    ALEWarning = { fg = c.yellow },
     ALEInfo = { fg = c.blue },
     ALEErrorSign = { fg = c.red },
-    ALEWarningSign = { fg = c.red },
+    ALEWarningSign = { fg = c.yellow },
     ALEInfoSign = { fg = c.blue },
     ALEVirtualTextError = { fg = c.red },
     ALEVirtualTextWarning = { fg = c.yellow },
