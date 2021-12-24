@@ -213,7 +213,7 @@ local set_groups = function()
     TSStringRegex = { fg = c.blue }, -- For regexes.
     TSStringEscape = { fg = c.pink }, -- For escape characters within a string.
     TSStringSpecial = { fg = c.pink }, -- For strings with special meaning that don't fit into the above categories.
-    TSSymbol = { fg = c.red }, -- For identifiers referring to symbols or atoms.
+    TSSymbol = { fg = c.pink }, -- For identifiers referring to symbols or atoms.
     TSTag = { fg = c.blue }, -- Tags like html tag names.
     TSTagAttribute = { fg = c.light_blue, style = "italic" }, -- For html tag attributes.
     TSTagDelimiter = { fg = c.gray_alt }, -- Tag delimiter like `<` `>` `/`
