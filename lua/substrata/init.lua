@@ -174,16 +174,16 @@ local set_groups = function()
     DashboardCenter = { fg = c.blue },
     DashboardFooter = { fg = c.green, style = "italic" },
     -- TreeSitter highlight groups
-    TSAnnotation = { fg = red }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+    TSAnnotation = { fg = c.red }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
     TSAttribute = { fg = c.pink }, -- (unstable) TODO: docs
     TSBoolean = { fg = c.pink, bg = c.none, style = cfg.boolean_style }, -- true or false
-    TSCharacter = { fg = red }, -- For characters.
+    TSCharacter = { fg = c.red }, -- For characters.
     TSComment = { fg = c.gray, bg = c.none, style = cfg.comment_style }, -- For comment blocks.
     TSConditional = { fg = c.pink, style = cfg.keyword_style }, -- For keywords related to conditionnals.
     TSConstant = { fg = c.fg }, -- For constants
     TSConstBuiltin = { fg = c.pink, style = "italic" }, -- For constants that are built in the language: `nil` in Lua.
     TSConstMacro = { fg = c.cyan }, -- For constants that are defined by macros: `NULL` in C.
-    TSConstructor = { fg = red }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    TSConstructor = { fg = c.red }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     TSError = { fg = c.red }, -- For syntax/parser errors.
     TSException = { fg = c.blue }, -- For exception related keywords.
     TSField = { fg = c.blue }, -- For fields.
@@ -351,10 +351,8 @@ local set_groups = function()
     ProviderTruncateLine = { fg = c.gray },
     SagaShadow = { fg = c.gray },
     DiagnosticTruncateLine = { fg = c.gray },
-    DiagnosticError = { fg = c.red },
     DiagnosticWarning = { fg = c.yellow },
     DiagnosticInformation = { fg = c.blue },
-    DiagnosticHint = { fg = c.cyan },
     DefinitionPreviewTitle = { fg = c.gray_alt },
     LspSagaShTruncateLine = { fg = c.gray },
     LspSagaDocTruncateLine = { fg = c.gray },
@@ -395,6 +393,8 @@ local set_groups = function()
     CmpItemKindKeyword = { fg = c.fg },
     CmpItemKindProperty = { fg = c.fg },
     CmpItemKindUnit = { fg = c.fg },
+    -- Mini
+    MiniStatuslineFilename = { bg = c.bg1 },
   }
 
   for group, parameters in pairs(groups) do
