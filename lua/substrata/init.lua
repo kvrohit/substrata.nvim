@@ -393,7 +393,7 @@ local set_groups = function()
     CmpItemKindKeyword = { fg = c.fg },
     CmpItemKindProperty = { fg = c.fg },
     CmpItemKindUnit = { fg = c.fg },
-    -- Mini
+    -- MiniStatusLine
     MiniStatuslineModeNormal = { fg = c.bg0, bg = c.light_cyan },
     MiniStatuslineModeInsert = { fg = c.bg0, bg = c.light_blue },
     MiniStatuslineModeVisual = { fg = c.bg0, bg = c.light_pink },
@@ -403,6 +403,7 @@ local set_groups = function()
     MiniStatuslineFilename = { fg = c.fg, bg = c.bg1 },
     MiniStatuslineFileinfo = { fg = c.fg, bg = c.bg2 },
     MiniStatuslineInactive = { fg = c.gray, bg = c.bg1 },
+    -- MiniTabline
     MiniTablineCurrent = { fg = c.bg0, bg = c.light_cyan },
     MiniTablineVisible = { fg = c.bg0, bg = c.light_pink },
     MiniTablineHidden = { fg = c.gray, bg = c.bg2 },
