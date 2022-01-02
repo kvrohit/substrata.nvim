@@ -62,7 +62,7 @@ local set_groups = function()
     qfLineNr = { fg = c.blue, bg = c.bg1 },
     Search = { style = "reverse" },
     SpecialKey = { fg = c.bg3 },
-    SpellBad = { fg = c.red, bg = c.none, style = "italic,undercurl" },
+    SpellBad = { bg = c.none, style = "italic,undercurl" },
     SpellCap = { fg = c.blue, bg = c.none, style = "italic,undercurl" },
     SpellLocal = { fg = c.cyan, bg = c.none, style = "italic,undercurl" },
     SpellRare = { fg = c.cyan, bg = c.none, style = "italic,undercurl" },
@@ -184,7 +184,7 @@ local set_groups = function()
     TSConstBuiltin = { fg = c.pink, style = "italic" }, -- For constants that are built in the language: `nil` in Lua.
     TSConstMacro = { fg = c.cyan }, -- For constants that are defined by macros: `NULL` in C.
     TSConstructor = { fg = c.red }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    TSError = { fg = c.red }, -- For syntax/parser errors.
+    -- TSError = { fg = c.red }, -- For syntax/parser errors.
     TSException = { fg = c.blue }, -- For exception related keywords.
     TSField = { fg = c.blue }, -- For fields.
     TSFloat = { fg = c.pink }, -- For floats.
