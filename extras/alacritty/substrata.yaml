@@ -7,7 +7,7 @@ colors:
 
   # Cursor colors
   cursor:
-    text: '#191c25'
+    text:   '#191c25'
     cursor: '#b5b4c9'
 
   # Normal colors

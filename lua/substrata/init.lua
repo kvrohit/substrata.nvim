@@ -1,5 +1,6 @@
-local c = require("substrata.colors")
+local variants = require("substrata.colors")
 local cfg = require("substrata.config").config
+local c = variants[cfg.variant]
 local utils = require("substrata.utils")
 local M = {}
 

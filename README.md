@@ -68,14 +68,15 @@ colorscheme substrata
 
 > Configuration needs to be set **BEFORE** loading the color scheme with `colorscheme substrata`
 
-| Option                     | Default | Description              |
-| -------------------------- | ------- | ------------------------ |
-| substrata_italic_comments  | `true`  | Make comments italic     |
-| substrata_italic_keywords  | `false` | Make keywords italic     |
-| substrata_italic_booleans  | `false` | Make booleans italic     |
-| substrata_italic_functions | `false` | Make functions italic    |
-| substrata_italic_variables | `false` | Make variables italic    |
-| substrata_transparent      | `false` | Disable background color |
+| Option                     | Default   | Description              |
+| -------------------------- | --------- | ------------------------ |
+| substrata_italic_comments  | `true`    | Make comments italic     |
+| substrata_italic_keywords  | `false`   | Make keywords italic     |
+| substrata_italic_booleans  | `false`   | Make booleans italic     |
+| substrata_italic_functions | `false`   | Make functions italic    |
+| substrata_italic_variables | `false`   | Make variables italic    |
+| substrata_transparent      | `false`   | Disable background color |
+| substrata_variant          | `default` | Colorscheme variant      |
 
 ```lua
 -- Example config in lua
