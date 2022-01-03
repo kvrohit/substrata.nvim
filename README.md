@@ -94,6 +94,11 @@ let g:substrata_italic_functions = 1
 colorscheme substrata
 ```
 
+```vim
+" Setting brighter colorscheme variant
+let g:substrata_variant = "brighter"
+```
+
 ## Preview
 
 ### Terminal
