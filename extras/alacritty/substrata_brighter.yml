@@ -1,0 +1,33 @@
+# Colors (Substrata)
+colors:
+  # Default colors
+  primary:
+    background: '#191c25'
+    foreground: '#c5c4d4'
+
+  # Cursor colors
+  cursor:
+    text: '#191c25'
+    cursor: '#c5c4d4'
+
+  # Normal colors
+  normal:
+    black: '#525566'
+    red: '#d59076'
+    green: '#83aa74'
+    yellow: '#b8a161'
+    blue: '#889bb4'
+    magenta: '#a994b8'
+    cyan: '#77adb1'
+    white: '#bfbed0'
+
+  # Bright colors
+  bright:
+    black: '#666b7f'
+    red: '#fead90'
+    green: '#9dca8c'
+    yellow: '#dbc380'
+    blue: '#afc5de'
+    magenta: '#cdb6dd'
+    cyan: '#94cdd1'
+    white: '#f0ecfe'
