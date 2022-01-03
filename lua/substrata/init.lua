@@ -174,16 +174,16 @@ local set_groups = function()
     DashboardCenter = { fg = c.blue },
     DashboardFooter = { fg = c.green, style = "italic" },
     -- TreeSitter highlight groups
-    TSAnnotation = { fg = red }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+    TSAnnotation = { fg = c.red }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
     TSAttribute = { fg = c.pink }, -- (unstable) TODO: docs
     TSBoolean = { fg = c.pink, bg = c.none, style = cfg.boolean_style }, -- true or false
-    TSCharacter = { fg = red }, -- For characters.
+    TSCharacter = { fg = c.red }, -- For characters.
     TSComment = { fg = c.gray, bg = c.none, style = cfg.comment_style }, -- For comment blocks.
     TSConditional = { fg = c.pink, style = cfg.keyword_style }, -- For keywords related to conditionnals.
     TSConstant = { fg = c.fg }, -- For constants
     TSConstBuiltin = { fg = c.pink, style = "italic" }, -- For constants that are built in the language: `nil` in Lua.
     TSConstMacro = { fg = c.cyan }, -- For constants that are defined by macros: `NULL` in C.
-    TSConstructor = { fg = red }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    TSConstructor = { fg = c.red }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     TSError = { fg = c.red }, -- For syntax/parser errors.
     TSException = { fg = c.blue }, -- For exception related keywords.
     TSField = { fg = c.blue }, -- For fields.
@@ -351,10 +351,8 @@ local set_groups = function()
     ProviderTruncateLine = { fg = c.gray },
     SagaShadow = { fg = c.gray },
     DiagnosticTruncateLine = { fg = c.gray },
-    DiagnosticError = { fg = c.red },
     DiagnosticWarning = { fg = c.yellow },
     DiagnosticInformation = { fg = c.blue },
-    DiagnosticHint = { fg = c.cyan },
     DefinitionPreviewTitle = { fg = c.gray_alt },
     LspSagaShTruncateLine = { fg = c.gray },
     LspSagaDocTruncateLine = { fg = c.gray },
@@ -395,6 +393,38 @@ local set_groups = function()
     CmpItemKindKeyword = { fg = c.fg },
     CmpItemKindProperty = { fg = c.fg },
     CmpItemKindUnit = { fg = c.fg },
+    -- mini.nvim
+    MiniStatuslineModeNormal = { fg = c.bg0, bg = c.light_cyan },
+    MiniStatuslineModeInsert = { fg = c.bg0, bg = c.light_blue },
+    MiniStatuslineModeVisual = { fg = c.bg0, bg = c.light_pink },
+    MiniStatuslineModeReplace = { fg = c.bg0, bg = c.light_yellow },
+    MiniStatuslineModeCommand = { fg = c.bg0, bg = c.light_green },
+    MiniStatuslineModeOther = { fg = c.gray, bg = c.bg1 },
+    MiniStatuslineDevInfo = { fg = c.fg, bg = c.bg2 },
+    MiniStatuslineFilename = { fg = c.fg, bg = c.bg1 },
+    MiniStatuslineFileinfo = { fg = c.fg, bg = c.bg2 },
+    MiniStatuslineInactive = { fg = c.gray, bg = c.bg1 },
+    MiniTablineCurrent = { fg = c.bg0, bg = c.light_cyan },
+    MiniTablineVisible = { fg = c.bg0, bg = c.light_pink },
+    MiniTablineHidden = { fg = c.gray, bg = c.bg2 },
+    MiniTablineModifiedCurrent = { fg = c.bg0, bg = c.light_cyan },
+    MiniTablineModifiedVisible = { fg = c.bg0, bg = c.light_pink },
+    MiniTablineModifiedHidden = { fg = c.gray, bg = c.bg2 },
+    MiniTablineFill = { bg = c.bg1 },
+    MiniCursorword = { style = "underline" },
+    MiniSurround = { style = "underline" },
+    MiniTrailspace = { bg = c.red },
+    MiniCompletionActiveParameter = { style = "underline" },
+    MiniJump = { style = "reverse" },
+    MiniStarterCurrent = { fg = c.light_cyan },
+    MiniStarterFooter = { fg = c.gray_alt },
+    MiniStarterHeader = { fg = c.light_blue },
+    MiniStarterInactive = { fg = c.gray_alt },
+    MiniStarterItem = { fg = c.fg, bg = c.bg1 },
+    MiniStarterItemBullet = { bg = c.bg1 },
+    MiniStarterItemPrefix = { style = "underline" },
+    MiniStarterSelection = { fg = c.light_pink },
+    MiniStarterQuery = { fg = c.light_pink },
   }
 
   for group, parameters in pairs(groups) do
