@@ -178,7 +178,7 @@ local set_groups = function()
     TSAnnotation = { fg = c.green }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
     TSAttribute = { fg = c.pink }, -- (unstable) TODO: docs
     TSBoolean = { fg = c.pink, bg = c.none, style = cfg.boolean_style }, -- true or false
-    TSCharacter = { fg = c.cyan }, -- For characters.
+    TSCharacter = { fg = c.pink }, -- For characters.
     TSComment = { fg = c.gray, bg = c.none, style = cfg.comment_style }, -- For comment blocks.
     TSConditional = { fg = c.pink, style = cfg.keyword_style }, -- For keywords related to conditionnals.
     TSConstant = { fg = c.fg }, -- For constants
