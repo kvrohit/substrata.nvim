@@ -32,7 +32,7 @@ local set_groups = function()
     Normal = { fg = c.fg, bg = cfg.transparent and c.none or c.bg0 }, -- normal text and background color
     NormalNC = { fg = c.fg, bg = cfg.transparent and c.none or c.bg0 }, -- normal text in non-current windows
     SignColumn = { fg = c.fg, bg = cfg.transparent and c.none or c.bg0 }, -- column where signs are displayed
-    EndOfBuffer = { fg = c.disabled }, -- ~ lines at the end of a buffer
+    EndOfBuffer = { fg = c.bg3 }, -- ~ lines at the end of a buffer
     NormalFloat = { fg = c.fg, bg = c.bg2 }, -- normal text and background color for floating windows
     FloatBorder = { fg = c.blue, bg = c.bg2 },
     ColorColumn = { fg = c.none, bg = c.bg1 }, --  used for the columns set with 'colorcolumn'
@@ -48,7 +48,7 @@ local set_groups = function()
     Folded = { fg = c.gray, c.none, style = "italic" },
     FoldColumn = { fg = c.blue },
     IncSearch = { style = "reverse" },
-    LineNr = { fg = c.bg4 },
+    LineNr = { fg = c.gray },
     CursorLineNr = { fg = c.gray_alt },
     MatchParen = { fg = c.light_cyan, style = "bold" },
     ModeMsg = { fg = c.cyan, style = "bold" },
@@ -314,7 +314,7 @@ local set_groups = function()
     NvimTreeOpenedFile = { fg = c.light_blue },
     NvimTreeEmptyFolderName = { fg = c.gray },
     NvimTreeFolderIcon = { fg = c.gray_alt },
-    NvimTreeIndentMarker = { fg = c.disabled },
+    NvimTreeIndentMarker = { fg = c.bg3 },
     NvimTreeGitDirty = { fg = c.gray_alt },
     NvimTreeGitStaged = { fg = c.cyan },
     NvimTreeGitRenamed = { fg = c.yellow },
@@ -380,7 +380,7 @@ local set_groups = function()
     Sneak = { fg = c.bg0, bg = c.green },
     SneakScope = { bg = c.bg4 },
     -- Indent Blankline
-    IndentBlanklineChar = { fg = c.disabled },
+    IndentBlanklineChar = { fg = c.bg3 },
     IndentBlanklineContextChar = { fg = c.gray },
     -- nvim-cmp
     CmpItemAbbrDeprecated = { fg = c.gray, style = "strikethrough" },
