@@ -200,7 +200,7 @@ local set_groups = function()
     TSLabel = { fg = c.cyan }, -- For labels: `label:` in C and `:label:` in Lua.
     TSMethod = { fg = c.light_blue, style = cfg.function_style }, -- For method calls and definitions.
     TSNamespace = { fg = c.blue }, -- For identifiers referring to modules and namespaces.
-    TSNone = {}, -- For no highlighting.
+    -- TSNone = {}, -- No highlighting. Don't change the values of this highlight group.
     TSNumber = { fg = c.pink }, -- For all numbers
     TSOperator = { fg = c.gray_alt }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter = { fg = c.fg }, -- For parameters of a function.
