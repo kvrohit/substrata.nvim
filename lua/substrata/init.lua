@@ -32,7 +32,7 @@ local set_groups = function()
     Normal = { fg = c.fg, bg = cfg.transparent and c.none or c.bg }, -- normal text and background color
     NormalNC = { fg = c.fg, bg = cfg.transparent and c.none or c.bg }, -- normal text in non-current windows
     SignColumn = { fg = c.fg, bg = cfg.transparent and c.none or c.bg }, -- column where signs are displayed
-    EndOfBuffer = { fg = c.gray03 }, -- ~ lines at the end of a buffer
+    EndOfBuffer = { fg = c.gray02 }, -- ~ lines at the end of a buffer
     NormalFloat = { fg = c.fg, bg = c.gray02 }, -- normal text and background color for floating windows
     FloatBorder = { fg = c.blue, bg = c.gray02 },
     ColorColumn = { fg = c.none, bg = c.gray01 }, --  used for the columns set with 'colorcolumn'
@@ -86,7 +86,7 @@ local set_groups = function()
     NormalMode = { fg = c.cyan, bg = c.none, style = "reverse" },
     InsertMode = { fg = c.green, bg = c.none, style = "reverse" },
     VisualMode = { fg = c.cyan, bg = c.none, style = "reverse" },
-    VertSplit = { fg = c.gray06 },
+    VertSplit = { fg = c.gray03 },
     CommandMode = { fg = c.gray05, bg = c.none, style = "reverse" },
     Warnings = { fg = c.yellow },
     healthError = { fg = c.red },
