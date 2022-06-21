@@ -79,7 +79,7 @@ local set_groups = function()
     VisualNOS = { fg = c.none, bg = c.gray03 },
     WarningMsg = { fg = c.yellow, style = "bold" },
     WildMenu = { fg = c.bg, bg = c.blue, style = "bold" },
-    CursorColumn = { fg = c.none, bg = c.fg },
+    CursorColumn = { fg = c.none, bg = c.gray01 },
     CursorLine = { fg = c.none, bg = c.gray01 },
     ToolbarLine = { fg = c.fg, bg = c.gray01 },
     ToolbarButton = { fg = c.fg, bg = c.none, style = "bold" },
@@ -331,10 +331,10 @@ local set_groups = function()
     ALEVirtualTextWarning = { fg = c.yellow },
     ALEVirtualTextInfo = { fg = c.blue },
     -- WhichKey
-    WhichKey = { fg = c.pink, style = "bold" },
-    WhichKeyGroup = { fg = c.pink, style = "italic" },
-    WhichKeyDesc = { fg = c.blue, style = "bold" },
-    WhichKeySeperator = { fg = c.green },
+    WhichKey = { fg = c.bright_cyan },
+    WhichKeyGroup = { fg = c.magenta, style = "italic" },
+    WhichKeyDesc = { fg = c.blue },
+    WhichKeySeperator = { fg = c.gray05 },
     WhichKeyFloating = { bg = c.gray01 },
     WhichKeyFloat = { bg = c.gray01 },
     -- LspSaga
@@ -436,6 +436,13 @@ local set_groups = function()
     StatusLineInfo = { fg = c.blue, bg = c.gray01 },
     StatusLineWarn = { fg = c.yellow, bg = c.gray01 },
     StatusLineError = { fg = c.red, bg = c.gray01 },
+    -- Hydra
+    HydraRed = { fg = c.red },
+    HydraBlue = { fg = c.blue },
+    HydraAmaranth = { fg = c.bright_red },
+    HydraTeal = { fg = c.cyan },
+    HydraPink = { fg = c.magenta },
+    HydraHint = { fg = c.fg, bg = c.gray02 },
   }
 
   for group, parameters in pairs(groups) do
