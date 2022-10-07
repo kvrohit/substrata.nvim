@@ -238,9 +238,9 @@ local set_groups = function()
     TSVariable = { fg = c.fg, style = cfg.variable_style }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.pink, style = cfg.variable_style }, -- Variable names that are defined by the languages, like `this` or `self`.
     -- highlight groups for the native LSP client
-    LspReferenceText = { fg = c.bg, bg = c.pink }, -- used for highlighting "text" references
-    LspReferenceRead = { fg = c.bg, bg = c.pink }, -- used for highlighting "read" references
-    LspReferenceWrite = { fg = c.bg, bg = c.pink }, -- used for highlighting "write" references
+    LspReferenceText = { fg = c.none, bg = c.pink }, -- used for highlighting "text" references
+    LspReferenceRead = { fg = c.none, bg = c.pink }, -- used for highlighting "read" references
+    LspReferenceWrite = { fg = c.none, bg = c.pink }, -- used for highlighting "write" references
     -- Diagnostics
     DiagnosticError = { fg = c.red }, -- base highlight group for "Error"
     DiagnosticWarn = { fg = c.yellow }, -- base highlight group for "Warning"
